@@ -3,13 +3,8 @@
 
 ##从文本中构建向量
 def loadDataSet():
-    postingList=[['my', 'dog', 'has', 'flea', 'problems', 'help', 'please'],
-                 ['maybe', 'not', 'take', 'him', 'to', 'dog', 'park', 'stupid'],
-                 ['my', 'dalmation', 'is', 'so', 'cute', 'I', 'love', 'him'],
-                 ['stop', 'posting', 'stupid', 'worthless', 'garbage'],
-                 ['mr', 'licks', 'ate', 'my', 'steak', 'how', 'to', 'stop', 'him'],
-                 ['quit', 'buying', 'worthless', 'dog', 'food', 'stupid']]
-    classVec = [0,1,0,1,0,1]    ##分别表示标签
+    postingList=[['大量', '电脑'],['代开', '发票'],['大量', '发票'],['大量', '玩具'],['代开', '大会']]
+    classVec = [1,0,0,1,1]    ##分别表示标签
     return postingList,classVec ##返回输入数据和标签向量
                  
 def createVocabList(dataSet):

@@ -5,9 +5,9 @@ from numpy import *
 
 ##得到每个特征的条件概率
 def trainNB0(trainMatrix,trainCategory):###输入的文档信息和标签
-    numTrainDocs = len(trainMatrix)
-    numWords = len(trainMatrix[0])
-    pAbusive = sum(trainCategory)/float(numTrainDocs)
+    numTrainDocs = len(trainMatrix) # 所有语句list 长度
+    numWords = len(trainMatrix[0]) # 第 0 个矩阵长度
+    pAbusive = sum(trainCategory)/float(numTrainDocs) #屏蔽语句个数个数 / 总语句个数
     p0Num = ones(numWords)
     p1Num = ones(numWords)      
     p0Denom = 2.0
